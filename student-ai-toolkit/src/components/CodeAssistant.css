@@ -1,0 +1,294 @@
+*{
+    box-sizing: border-box;
+}
+
+.username{
+  color: #111;
+  text-shadow: 1px 1px 1px #eee;
+  font-size: clamp(2.5rem,3vw,3.5rem);
+}
+.itextarea{
+    background-color: lightgrey;
+    width: 53%;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: clamp(.8rem,3vw,0.9rem);
+    color: #000;
+    box-shadow: 0 0 7px 0 #111;
+    outline: none;
+    overflow-y: auto;
+    resize: none;
+    scroll-behavior: smooth;
+    font-family: 'Arial';
+}
+.itextarea::-webkit-scrollbar{
+    width: 8px;
+}
+.itextarea::-webkit-scrollbar:hover{
+    cursor:pointer;
+}
+.itextarea::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 6px;
+}
+
+.input-holder{
+    padding: 5px;
+    position: sticky;
+    top:78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.input-holder2{
+  padding: 5px;
+  position: sticky;
+  top:78px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.clear{
+    max-width: 3%;
+    min-width: 25px;
+    cursor: pointer;
+}
+.clear:hover{
+    background-color: rgb(253, 57, 57);
+}
+.chat-log{
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height: 85vh;
+    border-radius: 5px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: clamp(.9rem,3vw,1rem);
+    line-height: 20px;
+    padding: 1%;
+    font-family: 'Josefin Sans';
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 3px #444; /* Reverse the order of messages *//* Enable vertical scrolling */
+}
+.chat-log::-webkit-scrollbar{
+    width: 6px;
+}
+
+.chat-log::-webkit-scrollbar-thumb{
+    background-color: #999;
+    border-radius: 10px;
+}
+.chat-log::-webkit-scrollbar-thumb:hover{
+    background-color: #b9b9b9;
+}
+.send{
+    max-width: 2.2%;
+    min-width: 22px;
+    cursor: pointer;
+}
+.iaudio{
+    cursor: pointer;
+    max-width: 2.9%;
+    min-width: 22px;
+}
+
+.user-text{
+    background-color: orange;
+    border-radius: 5px;
+    padding: 1%;
+    margin-bottom: 1%;
+    white-space: pre-line;
+}
+.gpt-text{
+    background-color: aqua;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    padding: 1%;
+    color: #111;
+}
+
+/* Style for the code box */
+.code-box {
+    background-color: #222;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    white-space: pre-wrap; /* Preserve line breaks */
+    font-family: 'fira code';
+    font-size: clamp(0.5rem, 3vw, .8rem);
+    color: #fff; 
+    overflow: auto;/* Use a monospace font for code */
+    scroll-behavior: smooth;
+    scroll-padding: 2px;
+  }
+  .code-box::-webkit-scrollbar{
+    height: 6px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+  }
+  .code-box::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 3px;
+  }
+  
+  /* Style for individual code lines */
+  .code-line {
+    font-size: 10px;
+    line-height: 1.5; /* Adjust line height for readability */
+    color: #333; /* Text color for code lines */
+  }
+  
+  .typewriter-text {
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  /* Keyframes for the typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Keyframes for the caret (blinking cursor) animation */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-right-color: transparent;
+    }
+    50% {
+      border-right-color: black;
+    }
+  }
+
+.ccopy{
+    float: right;
+    font-size: 11px;
+    padding: .5% 1%;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 2px;
+    font-family: 'roboto';
+    font-weight: bold;
+
+}
+.ccopy:hover{
+    background-color: #aaa;
+    cursor: pointer;
+}
+.copy-success{
+    color: white;
+    background-color: orange;
+    width: fit-content;
+    border-radius: 3px;
+    padding: .5%;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px black;
+}
+  
+.loading-dots {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+  }
+  
+  .ldot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: aqua; /* Dot color */
+    border-radius: 50%;
+    border: 0.5px solid #666;
+    animation: loading-dots 1.2s infinite ease-in-out both;
+    margin-right: 6px; /* Adjust spacing between dots */
+  }
+  
+  .ldot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .ldot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .ldot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes loading-dots {
+    0%, 70%, 100% {
+      transform: scale(0);
+    }
+    40% {
+      transform: scale(1);
+    }
+  }
+  
+  .extracted-text {
+    font-size: 18px; /* Set the desired font size */
+    font-weight: normal; /* Set the desired font weight */
+    font-style: normal; /* Set the desired font style */
+    /* Add other desired styling properties as needed */
+  }
+
+  .text-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f8f8f8;
+    display: none;
+  }
+  
+  .text-content {
+    white-space: pre-wrap; /* Preserve line breaks and spaces */
+  }
+  
+  .ex-input{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .extract-summarize{
+    background-color: #fe9e0d;
+    color: #000;
+    padding: 0.5% 0.8%;
+    font-size: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 4px;
+    margin-bottom: 5px;
+
+  }
+
+  .extract-summarize:hover{
+    background-color: #ffbc7d;
+    box-shadow: 1.5px 1.5px 1.5px #333;
+  }
+  
+  .summarize{
+    background-color: greenyellow;
+    color: #111;
+  }
+  
+ 
+  .error-message {
+    background-color: #ffdddd;
+    color: #ff0000;
+    padding: 10px;
+    margin: 10px 10px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+
+  }
+  

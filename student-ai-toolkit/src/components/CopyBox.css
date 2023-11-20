@@ -1,0 +1,23 @@
+.copyc{
+    float: right;
+    font-size: 12px;
+    padding: .4%;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 2px;
+    font-family: 'roboto';
+    font-weight: bold;
+}
+.copyc:hover{
+    background-color: #aaa;
+    cursor: pointer;
+}
+.csuccess{
+    color: white;
+    background-color: orange;
+    width: fit-content;
+    border-radius: 3px;
+    padding: .5%;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px black;
+}

@@ -1,0 +1,218 @@
+body{
+    overflow-x: hidden;
+}
+
+.banner{
+    width: 40%;
+    min-width: 50px;
+    max-width: 350px;
+    background-repeat: no-repeat;
+    position:absolute;
+    right: -75px;
+    z-index: -1;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 45%; /* Make the div initially take up the full width of its parent container */
+    min-width: 200px; 
+    max-width: 700px;/* Set a maximum width to prevent it from growing too wide on large screens */
+    margin-left: 8%;
+    padding-top: 40px;
+}
+.title{
+    font-size: clamp(2.5rem,5vw,3.4rem);
+    color: #fe9e0d;
+    max-width: 800px;
+    text-shadow: 1.8px 1px 1px #000;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.desc{
+    font-size: clamp(1rem,3vw,1.7rem);
+    padding: 5px;
+    font-weight: 600;
+    word-spacing: 2px;
+}
+
+#subh1{
+    color: #fff;
+    /* text-shadow: 2px 2px 1px #fff; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: bolder; */
+    word-spacing: 1px;
+    text-shadow: 1px 1px 1px #1b2430;
+    line-height: 1.3;
+}
+
+
+.home-img1{
+    float: right;
+    width: 45%;
+    max-width: 400px;
+    margin-right: 2%;
+}
+
+.cards{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    padding: 30px;
+}
+.card{
+    background-color: #fff;
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
+    width: 85%;
+    box-shadow: 3px 3px 3px #555;
+}
+.card:hover{
+    box-shadow: 10px 10px #444;
+}
+
+.card-img{
+    width: 50%;
+}
+.card .gram{
+    padding: 0;
+}
+.card .mail{
+    padding: 0;
+}
+.card .docs{
+    padding: 0;
+}
+.card .tips{
+    padding: 0;
+}
+
+.chead{
+    font-family: 'Bree Serif';
+}
+
+
+
+.csubmail{
+    padding-bottom: 90px;
+}
+.csub{
+    font-size: clamp(0.8rem,1.5vw,1rem);
+    font-family: 'Roboto Slab';
+    font-weight: 600;
+    text-align:justify;
+    padding-top: 5px;
+}
+@media screen and (max-width:1100px) {
+    .cards{
+        width: 100%;
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        padding: 30px;
+    }
+    .card{
+        background-color: #fff;
+        text-align: center;
+        margin: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.4s ease-in-out;
+        box-shadow: 3px 3px 3px #555;
+
+    }
+    .card:hover{
+        box-shadow: 8px 8px #444;
+    }
+    .card-img{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:840px) {
+    .cards{
+        width: 100%;
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        padding: 30px;
+    }
+    .card{
+        background-color: #fff;
+        text-align: center;
+        margin: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.4s ease-in-out;
+        box-shadow: 3px 3px 3px #555;
+    }
+    .card:hover{
+        box-shadow: 5px 5px #444;
+    }
+    .card-img{
+        width: 50%;
+    }
+
+}
+@media screen and (max-width:769px) {
+    .cards{
+        width: 100%;
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        margin-left: -2%;
+    }
+    .card{
+        background-color: #fff;
+        text-align: center;
+        padding: 10%;
+        border-radius: 10px;
+        transition: 0.4s ease-in-out;
+        box-shadow: 3px 3px 3px #555;
+
+    }
+    .card:hover{
+        box-shadow: 7px 7px #444;
+    }
+    .card-img{
+        width: 50%;
+    }
+
+}
+@media screen and (max-width:500px) {
+    .cards{
+        width: 100%;
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(10,1fr);
+        padding: 30px;
+
+    }
+    .card{
+        background-color: #fff;
+        text-align: center;
+        margin: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.4s ease-in-out;
+        box-shadow: 3px 3px 3px #555;
+
+    }
+    .card:hover{
+        box-shadow: 4px 4px #444;
+    }
+    .card-img{
+        width: 50%;
+    }
+
+}

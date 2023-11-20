@@ -1,0 +1,17 @@
+.extracted-text {
+    font-size: 18px; /* Set the desired font size */
+    font-weight: normal; /* Set the desired font weight */
+    font-style: normal; /* Set the desired font style */
+    /* Add other desired styling properties as needed */
+  }
+  .text-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f8f8f8;
+    display: none;
+  }
+  
+  .text-content {
+    white-space: pre-wrap; /* Preserve line breaks and spaces */
+  }
